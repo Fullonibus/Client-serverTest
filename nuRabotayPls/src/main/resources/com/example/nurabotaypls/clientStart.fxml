@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="676.0" prefWidth="677.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nurabotaypls.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="120.0" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Create">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="286.0" prefWidth="434.0">
+                     <children>
+                        <TextField fx:id="name_text_field" layoutX="14.0" layoutY="5.0" prefHeight="25.0" prefWidth="355.0" text="Name" />
+                        <TextField fx:id="desciption_text_field" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="356.0" text="Description" />
+                        <TextField fx:id="textField1" editable="false" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="262.0" />
+                        <Button layoutX="282.0" layoutY="75.0" mnemonicParsing="false" onAction="#doFileChoose" prefHeight="25.0" prefWidth="88.0" text="Select file" />
+                     
+                         <Label fx:id="welcomeText" />
+                         <Button layoutX="21.0" layoutY="108.0" onAction="#onInputButtonClick" prefHeight="38.0" prefWidth="347.0" text="Input" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Read">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="298.0">
+                     <children>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" onMouseClicked="#onMouseClicked" onMousePressed="#onMousePressed" prefHeight="403.0" prefWidth="287.0">
+                          <columns>
+                            <TableColumn fx:id="id_column" editable="false" prefWidth="39.0" text="ID" />
+                              <TableColumn fx:id="name_column" prefWidth="111.0" text="Name" />
+                            <TableColumn fx:id="description_column" editable="false" prefWidth="131.0" text="Description" />
+                          </columns>
+                        </TableView>
+                        <ImageView fx:id="image_field" fitHeight="265.0" fitWidth="309.0" layoutX="322.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TabPane>
+   </children>
+</VBox>
